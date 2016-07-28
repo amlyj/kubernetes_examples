@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tensorflow
+  labels:
+    app: redis
+    role: master
+    tier: backend
+spec:
+  type: NodePort
+  ports:
+  - name: tensorflow
+    port: 8888
+  selector:
+    app: redis
+    role: master
+    tier: backend
