@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: seagull
+spec:
+  containers:
+  - name: seagull
+    image: tobegi3hub/seagull
+    ports:
+    - containerPort: 10086
