@@ -11,6 +11,10 @@ spec:
   ports:
   - name: tensorflow
     port: 8888
+    nodePort: 30001
+  - name: tensorboard
+    port: 6006
+    nodePort: 30002
   selector:
     app: redis
     role: master

@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: federated-cluster
+        module: federation-apiserver
+    spec:
+      containers:
+      - name: nginx
+        image: tobe.com/library/nginx
+        ports:
+        - containerPort: 80

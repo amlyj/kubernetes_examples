@@ -1,0 +1,11 @@
+{"kind": "Deployment",
+ "spec": 
+{"template": {"spec": {"containers": 
+[{"command": "", 
+"name": "ms-999-eep1-020530", "env": 
+[
+{"name": "XIAOMI_ACCESS_KEY", 
+"value": "AKJUDVRVDLUZ6D43UI"
+}, 
+{"name": "XIAOMI_SECRET_KEY", 
+"value": "15xzSfTO2qYMmRpXraa0JsYwOl59XsUbx96959ky"}, {"name": "XIAOMI_ACCESS_KEY_ID", "value": "AKJUDVRVDLUZ6D43UI"}, {"name": "XIAOMI_SECRET_ACCESS_KEY", "value": "15xzSfTO2qYMmRpXraa0JsYwOl59XsUbx96959ky"}, {"name": "XIAOMI_FDS_ENDPOINT", "value": "cnbj1-fds.api.xiaomi.net"}, {"name": "CLOUD_ML_PREPARE_COMMAND", "value": ""}, {"name": "CLOUD_ML_FINISH_COMMAND", "value": ""}], "imagePullPolicy": "Always", "image": "docker.d.xiaomi.net/cloud-ml/model-tensorflow-cpu:0.12.0-xm1.0.0", "volumeMounts": [{"readOnly": true, "mountPath": "/usr/local/nvidia/lib64/", "name": "nvidia-libs-volume"}], "port": [{"containerPort": 9000}], "resources": {"requests": {"cpu": 0.5, "memory": "500M"}, "limits": {"cpu": "0.5", "memory": "500M"}}}], "volumes": [{"hostPath": {"path": "/usr/lib64/nvidia/"}, "name": "nvidia-libs-volume"}]}, "metadata": {"labels": {"schedule_time": "20170327102126", "resource_name": "ms-999-eep1-020530"}}}, "replicas": 1}, "apiVersion": "extensions/v1beta1", "metadata": {"name": "ms-999-eep1-020530"}}

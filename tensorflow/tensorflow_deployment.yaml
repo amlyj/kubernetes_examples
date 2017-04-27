@@ -20,3 +20,4 @@ spec:
             memory: 100Mi
         ports:
         - containerPort: 8888
+        - containerPort: 6006
