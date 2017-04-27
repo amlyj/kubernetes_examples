@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: grpc-helloworld
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: grpc-helloworld
+    spec:
+      containers:
+      - name: grpc-helloworld
+        image: tobegit3hub/grpc-helloworld
+        ports:
+        - containerPort: 50051
